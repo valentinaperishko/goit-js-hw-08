@@ -1,10 +1,10 @@
 import images from "./gallery-items.js";
 
 const refs = {
-    galleryList: document.querySelector('ul.gallery'),
-    lightbox: document.querySelector('.lightbox'),
-    btn: document.querySelector('[data-action="close-lightbox"]')
-  };
+  galleryList: document.querySelector('ul.gallery'),
+  lightbox: document.querySelector('.lightbox'),
+  btn: document.querySelector('[data-action="close-lightbox"]')
+};
 
 const createImage = (item, parent) => {
     const { preview, original, description } = item;
