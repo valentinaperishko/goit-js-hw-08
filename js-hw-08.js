@@ -84,26 +84,27 @@ const createImage = (item, parent) => {
 
   function setLightboxImageAttribute(step, index) {
     refs.imageLightbox.dataset.index = `${index + step}`;
-    refs.imageLightbox.src = images[index + step].original
+    refs.imageLightbox.src = images[index + step].original;
+    
   };
-
+  
   function arrowLeft() {
-    let index = +refs.imageLightbox.dataset.index;
+    let index = Number(refs.imageLightbox.dataset.index);
     if(index === 0) {
-      setLightboxImageAttribute(0, images.length - 1)
-      return
+      setLightboxImageAttribute(0, images.length - 1);
+      return;
     }
-    console.log(index);
+    // console.log(index);
     setLightboxImageAttribute(-1, index);
   };
 
   function arrowRight() {
-    let index = +refs.imageLightbox.dataset.index;
+    let index = Number(refs.imageLightbox.dataset.index);
     if(index === images.length - 1) {
-      setLightboxImageAttribute(0, 0)
-      return
+      setLightboxImageAttribute(0, 0);
+      return;
     }
-    console.log(index);
+    // console.log(index);
     setLightboxImageAttribute(1, index);
   }
 
