@@ -16,8 +16,7 @@ const createImage = (item, parent) => {
     img.dataset.source = original;
     img.src = preview;
     img.alt = description;
-    // img.dataset.index = img.index;
-    
+        
     parent.appendChild(img);
 };
   
