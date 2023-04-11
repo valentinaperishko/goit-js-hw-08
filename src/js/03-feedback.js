@@ -13,7 +13,7 @@ form.addEventListener('input', throttle(onInput, 1000));
 savedTextarea();
 
 function onSubmit(evt) {
-  evt.preventDefault;
+  evt.preventDefault();
   if (input.value !== '' && textarea.value !== '') {
     console.log(data);
     localStorage.removeItem(FEEDBACKKEY);
